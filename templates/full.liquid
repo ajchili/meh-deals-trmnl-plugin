@@ -1,21 +1,8 @@
-{% assign raw_features = deal.features | split: "- " %}
-{% assign delimiter = "-_-_-_-_" %}
-{% capture filtered_features %}
-{% for feature in raw_features %}
-{% if feature == "" %}
-{% continue %}
-{% endif %}
-{{ feature }}{{ delimiter }}
-{% endfor %}
-{% endcapture %}
-{% assign features = filtered_features | split: delimiter %}
-
 <div class="layout layout--center">
-
   <div class="grid">
     <div class="col">
-      <img class="image-dither" src="{{ deal.photos[0] }}" width="100%">
-      <span class="label">${{ deal.items[0].price }}</span>
+      <img class="image-dither" src="{{ photos[0] }}" width="100%">
+      <span class="label">{{ price }}</span>
       {% for feature in features | limit:3 %}
       {% if feature == "" %}
       {% continue %}
@@ -37,12 +24,12 @@
       {% endif %}
     </div>
     <div class="col col--span-2">
-      <span class="title title--small">{{ deal.story.title }}</span>
-      <span class="description clamp--25">{{ deal.story.body }}</span>
+      <span class="title title--small">{{ story.title }}</span>
+      <span class="description clamp--25">{{ story.body }}</span>
     </div>
   </div>
 </div>
 
 <div class="title_bar">
-  <span class="title">{{ deal.title }}</span>
+  <span class="title">{{ title }}</span>
 </div>
