@@ -1,0 +1,31 @@
+<div class="layout grid">
+  <div class="col">
+    <img class="image-dither" src="{{ photos[0] }}" width="100%" height="100%" style="object-fit: contain;">
+  </div>
+  <div class="col col--span-3">
+    <span class="label">{{ price }}</span>
+    {% for feature in features | limit:4 %}
+    {% if feature == "" %}
+    {% continue %}
+    {% endif %}
+    <div class="item" style="margin-bottom: 4px;">
+      <div class="meta"></div>
+      <div class="content">
+        <span class="description clamp--2">{{ feature }}</span>
+      </div>
+    </div>
+    {% endfor %}
+    {% if features.size > 4 %}
+    <div class="item">
+      <div class="meta"></div>
+      <div class="content">
+        <span class="description">Plus {{ features.size | minus: 3 }} more thing(s)!</span>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</div>
+
+<div class="title_bar">
+  <span class="title">{{ title }}</span>
+</div>

@@ -16,15 +16,19 @@ Follow https://docs.github.com/en/get-started/quickstart/fork-a-repo
 From the root directory run
 
 ```bash
-uv sync
+./bin/setup.sh
 ```
 
-### 3. Start the python servers
+### 3. Start the development servers
 
 From the root directory run
 
 ```bash
-uv run fastapi dev src/main.py
+docker compose up
 ```
 
-\_Note: For UI development I currently use the [TRMNL plugin editor](https://usetrmnl.com/plugin_settings?keyname=private_plugin).\_
+### 4. Navigate to the trmnl_preview
+
+Open [http://localhost:4567](http://localhost:4567) in your browser of choice and start making changes!
+
+_Note: for any backend changes, you will need to poll the sever for new data!_
