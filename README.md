@@ -1,6 +1,6 @@
 # meh-deals-trmnl-plugin
 
-trmnl plugin to display the daily deal(s) from [meh.com](https://meh.com).
+[trmnl](https://usetrmnl.com) plugin to display the daily deal(s) from [meh.com](https://meh.com).
 
 ## Layouts
 
