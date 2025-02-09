@@ -59,6 +59,5 @@ def get_current_deal():
         "soldOut": deal.get("soldOut", False) is True,
         "features": format_features(deal.get("features", "")),
         "photos": deal.get("photos", []),
-        "story": deal.get("story", {}),
         "theme": deal.get("theme", {}).get("foreground", "light")
     }
